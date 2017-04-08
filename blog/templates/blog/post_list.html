@@ -1,17 +1,11 @@
-<html>
-    <head>
-        <title>Lalita's blog</title>
-    </head>
-    <body>
-        <div>
-            <center><h1><a href="">Django Girls Blog</a></h1></center>
-        </div>
-		{% for post in posts %}
-		    <div>
-		        <p>published: {{ post.published_date }}</p>
-		        <h1><a href="">{{ post.title }}</a></h1>
-		        <p>{{ post.text|linebreaksbr }}</p>
-		    </div>
-		{% endfor %}
-    </body>
-</html>
+
+		            {% for post in posts %}
+		                <div class="post">
+		                    <div class="date">
+		                        <p>published: {{ post.published_date }}</p>
+		                        <hr>
+		                    </div>
+		                    <h1><a href="">{{ post.title }}</a></h1>
+		                    <p>{{ post.text|linebreaksbr }}</p>
+		                </div>
+		            {% endfor %}
